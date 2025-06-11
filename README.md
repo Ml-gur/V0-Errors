@@ -1,6 +1,6 @@
 # V0-Errors
 
-#RR_PNPM_LOCKFILE_CONFIG_MISMATCH  Cannot proceed with the frozen installation. The current "overrides" configuration doesn't match the value found in the lockfile22:52:3722:52:37Update your lockfile using "pnpm install --no-frozen-lockfile"22:52:37Error: Command "pnpm install --frozen-lockfile" exited with 122:52:3722:52:41Exiting build container
+# RR_PNPM_LOCKFILE_CONFIG_MISMATCH  Cannot proceed with the frozen installation. The current "overrides" configuration doesn't match the value found in the lockfile22:52:3722:52:37Update your lockfile using "pnpm install --no-frozen-lockfile"22:52:37Error: Command "pnpm install --frozen-lockfile" exited with 122:52:3722:52:41Exiting build container
 
 Edit
 This is a specific pnpm lockfile configuration mismatch error that's common in Vercel deployments. Let me search for the exact solution to this issue.
@@ -63,6 +63,11 @@ Configuration changes in your package.json (like "overrides") don't match what's
 Recommended Approach:
 
 Start with Solution 1 (update lockfile locally)
+
+
+# Eslint error
+try looking for the .eslintrc file to see if it already exists. If it does, delete it and re-run npm run lint. also downgrade the eslint to version to ensure it is working perfectly in our website, do not change the fuinctionality or design of the website. this website is not a web app it is supposed to be a web app, remember nothing changes. also fix this error during deployment. ./app/api/auth/signup/route.ts:34:24
+Type error: Expected 2-3 arguments, but got 1.
 If that fails, combine Solutions 2 and 3 (specify pnpm version + custom install command)
 Use Solution 4 if you need persistent configuration
 
