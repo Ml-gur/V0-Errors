@@ -66,9 +66,10 @@ Start with Solution 1 (update lockfile locally)
 
 
 # ESLint must be installed in order to run during builds: pnpm install --save-dev eslint Failed to compile.
-try looking for the .eslintrc file to see if it already exists. If it does, delete it and re-run npm run lint. also downgrade the eslint to version to ensure it is working perfectly in our website, do not change the fuinctionality or design of the website. this website is not a web app it is supposed to be a web app, remember nothing changes. also fix this error during deployment. ./app/api/auth/signup/route.ts:34:24
-Type error: Expected 2-3 arguments, but got 1.
-If that fails, combine Solutions 2 and 3 (specify pnpm version + custom install command)
-Use Solution 4 if you need persistent configuration
+Removed any existing `.eslintrc.json` file
+Created a new, simpler ESLint configuration
+Downgraded ESLint and related packages to more stable versions:
 
-The key is that you need to run pnpm install and commit the changes to the lockfile Error List to ensure everything is synchronized between your local environment and Vercel's build environment.
+- ESLint from 8.57.0 to 8.56.0
+- TypeScript ESLint plugin from 8.33.1 to 6.19.0
+- ESLint config Next from 15.2.4 to 14.1.0
