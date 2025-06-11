@@ -65,7 +65,7 @@ Recommended Approach:
 Start with Solution 1 (update lockfile locally)
 
 
-# Eslint error
+# ESLint must be installed in order to run during builds: pnpm install --save-dev eslint Failed to compile.
 try looking for the .eslintrc file to see if it already exists. If it does, delete it and re-run npm run lint. also downgrade the eslint to version to ensure it is working perfectly in our website, do not change the fuinctionality or design of the website. this website is not a web app it is supposed to be a web app, remember nothing changes. also fix this error during deployment. ./app/api/auth/signup/route.ts:34:24
 Type error: Expected 2-3 arguments, but got 1.
 If that fails, combine Solutions 2 and 3 (specify pnpm version + custom install command)
